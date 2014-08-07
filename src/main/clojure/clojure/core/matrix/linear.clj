@@ -137,7 +137,9 @@
   ([a] (mp/inverse a)))
 
 (defn least-squares
-  "Computes least-squares solution to a linear matrix equation.
+  "Computes least-squares solution to a linear matrix equation A.X = B where A
+   and B are inputs and X is the output that is computed. The solution 
+   minimizes the sum of squares of errors, i.e. ||B-A*X||^2
 
    Intended usage: (let [X (least-squares A B)] ....)"
   ([a b] (mp/least-squares a b)))
